@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+<script type="text/javascript">
+var magicArray = ['Signs point to yes','Yes','Most likely','Without a doubt','Yes - definitely','As I see it, yes.','You may rely on it.','Outlook good.','It is certain.','It is decidedly so.','Reply hazy, try again.','Better not tell you now.','Ask again later.','Concentrate and ask again.','Cannot predict now.','My sources say no.','Very doubtful.','My reply is no.','Outlook not so good.','Don\'t count on it.'];
+function runMagic() {
+	var randomInt = Math.floor(Math.random()*20);
+	var answerDiv = document.getElementById('answerdiv');
+	if(answerDiv.firstChild){
+		answerDiv.removeChild(answerDiv.firstChild);
+	}
+	answerDiv.appendChild(document.createTextNode(magicArray[randomInt]));
+	
+}
+</script>
+<style type="text/css">
+  html {
+    font-family: Garamond, serif;
+    font-size: 62.5%;
+  }
+  body {
+    font-size: 4em;
+  }
+  #main {
+    text-align: center;
+  }
+  #answerdiv {
+    color: #f00;
+    
+  }
+  
+</style>
+
+</head>
+<body>
+
+<div id="main">
+<p>Ask your question and click the 8 Ball below.</p>
+<span style="text-align:center">
+<a href ="javascript:void(0);" onClick="runMagic()"><img style="border:0px;" src="img/8ball.jpg" width="250px" alt="" /></a><br />
+<!-- b>Answer:</b><br / -->
+<span id="answerdiv" style="font-weight:bold; font-size="+1"></span>
+</span>
+</div>
+
+  </body></html>
